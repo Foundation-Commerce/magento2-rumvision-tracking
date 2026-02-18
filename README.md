@@ -11,9 +11,9 @@ app/code/FoundationCommerce/RumvisionTracking/
 
 After installation or updates, run:
 ```bash
-warden env exec php-fpm php bin/magento module:enable FoundationCommerce_RumvisionTracking
-warden env exec php-fpm php bin/magento setup:upgrade
-warden env exec php-fpm php bin/magento cache:flush
+php bin/magento module:enable FoundationCommerce_RumvisionTracking
+php bin/magento setup:upgrade
+php bin/magento cache:flush
 ```
 
 ## Configuration
@@ -65,7 +65,3 @@ app/code/FoundationCommerce/RumvisionTracking/
 - **CSP errors in browser console**: Ensure the Hyvä theme module is installed and up to date. The `HyvaCsp` helper handles nonce/hash injection automatically.
 - **Script on wrong pages**: The script is injected on all frontend pages via `default.xml`. To restrict it, modify the layout XML.
 - **Check module status**: `php bin/magento module:status FoundationCommerce_RumvisionTracking`
-
-## License
-
-Proprietary - Foundation Commerce
