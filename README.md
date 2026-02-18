@@ -1,6 +1,6 @@
-# FoundationCommerce RumVision Tracking
+# FoundationCommerce RumVision Tracking For Hyvä Theme
 
-Integrates the RumVision real user monitoring (RUM) tracking script into all frontend pages. The script is configurable via the Magento admin panel and can be enabled/disabled per store view. The inline script is CSP compliant using Hyvä's `HyvaCsp` helper.
+Integrates the RumVision real user monitoring (RUM) tracking script into all frontend pages of your Hyvä Theme. The script is configurable via the Magento admin panel and can be enabled/disabled per store view. The inline script is CSP compliant using Hyvä's `HyvaCsp` helper.
 
 ## Installation
 
