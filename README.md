@@ -4,9 +4,8 @@ Integrates the RumVision real user monitoring (RUM) tracking script into all fro
 
 ## Installation
 
-The module is located at:
 ```
-app/code/FoundationCommerce/RumvisionTracking/
+composer require foundation-commerce/module-rumvision-tracking
 ```
 
 After installation or updates, run:
