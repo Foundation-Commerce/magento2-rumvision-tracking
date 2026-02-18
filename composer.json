@@ -1,0 +1,22 @@
+{
+  "name": "foundation-commerce/module-rumvision-tracking",
+  "version": "1.0.0",
+  "description": "RumVision tracking script integration for Magento 2 frontend pages",
+  "type": "magento2-module",
+  "require": {
+    "php": "^8.1",
+    "magento/framework": "*",
+    "magento/module-config": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "FoundationCommerce\\RumvisionTracking\\": ""
+    }
+  }
+}

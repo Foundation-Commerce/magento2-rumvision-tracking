@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="foundation_commerce" translate="label" sortOrder="400">
+            <label>Foundation Commerce</label>
+        </tab>
+
+        <section id="rumvision_tracking" translate="label" sortOrder="50"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>RumVision Tracking</label>
+            <tab>foundation_commerce</tab>
+            <resource>FoundationCommerce_RumvisionTracking::config</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="10"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+
+                <field id="enabled" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable RumVision Tracking</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable the RumVision tracking script on the frontend.</comment>
+                </field>
+
+                <field id="site_id" translate="label comment" type="text" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>RumVision Site ID</label>
+                    <comment>Enter your RumVision site ID. This is used to load the tracking script.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="domain_name" translate="label comment" type="text" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Domain Name</label>
+                    <comment>Enter the domain name for the RumVision tracking script (e.g. example.com).</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
