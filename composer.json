@@ -1,6 +1,6 @@
 {
   "name": "foundation-commerce/module-rumvision-tracking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RumVision tracking script integration for Magento 2 frontend pages",
   "type": "magento2-module",
   "require": {
