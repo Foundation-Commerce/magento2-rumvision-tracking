@@ -4,6 +4,7 @@ declare(strict_types=1);
 use Hyva\Theme\ViewModel\HyvaCsp;
 
 /** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
 /** @var \FoundationCommerce\RumvisionTracking\ViewModel\TrackingScript $viewModel */
 /** @var HyvaCsp $hyvaCsp */
 $viewModel = $block->getData('view_model');
@@ -26,7 +27,7 @@ if (!$viewModel->isEnabled()) {
         var head = si.querySelector('head'), js = si.createElement('script');
         js.src = 'https://d5yoctgpv4cpx.cloudfront.net/'+rum+'/v4-'+vi.location.hostname+'.js';
         head.appendChild(js);
-    })( '<?= $block->escapeJs($siteId) ?>', window, document, '<?= $block->escapeJs($domainName) ?>' );
+    })( '<?= $escaper->escapeHtmlAttr($siteId) ?>', window, document, '<?= $escaper->escapeHtmlAttr($domainName) ?>' );
     //# sourceURL=rumvision.inline.js
 </script>
 <?php $hyvaCsp->registerInlineScript() ?>
